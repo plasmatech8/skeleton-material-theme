@@ -7,3 +7,31 @@ html,
 body {
 	@apply h-full overflow-hidden;
 }
+
+.btn {
+	@apply active:scale-100;
+}
+
+::-webkit-scrollbar-track {
+	@apply !bg-surface-100-800-token border-x;
+}
+
+::-webkit-scrollbar {
+	width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+	border: 3px solid rgba(0, 0, 0, 0);
+	background-clip: padding-box;
+	@apply bg-surface-300-600-token;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-surface-400-500-token;
+}
+
+.gradient-heading {
+	@apply bg-clip-text text-transparent box-decoration-clone;
+	@apply bg-gradient-to-br;
+	@apply from-primary-500 to-secondary-500;
+}
