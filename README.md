@@ -1,38 +1,29 @@
-# create-svelte
+# Skeleton Material Theme
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a demo attempt to create a Material-like theme using [SvelteKit](https://kit.svelte.dev/)
+and [Skeleton](https://www.skeleton.dev/) UI.
 
-## Creating a project
+![Alt text](./docs/home.png)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Theme
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+### Configuration
 
-# create a new project in my-app
-npm create svelte@latest my-app
+The theme is configured in two files:
+
+* [material.ts](https://github.com/plasmatech8/skeleton-material-theme/blob/main/src/material.ts) &nbsp;&nbsp;&nbsp;&nbsp; <- The main theme file for Skeleton
+* [app.postcss](https://github.com/plasmatech8/skeleton-material-theme/blob/main/src/app.postcss) &nbsp; <i class="fa-solid fa-left-long"></i> <- Contains some extra styles & CSS corrections
+
+### Ripple
+
+For the ripple-effect, the [svelte-ripple-action](https://github.com/Posandu/svelte-ripple-action)
+NPM package was installed.
+
+To add the Ripple effect to a button or anchor tag, you can use the `use:ripple` Svelte action.
+
+e.g.
+```svelte
+<button class="btn variant-filled-primary" use:ripple>primary</button>
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+> Note: The default color of the ripple is set to the text color (in [app.postcss](https://github.com/plasmatech8/skeleton-material-theme/blob/main/src/app.postcss)).
