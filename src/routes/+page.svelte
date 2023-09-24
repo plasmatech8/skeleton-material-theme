@@ -1,3 +1,7 @@
+<script lant="ts">
+	import { ripple } from 'svelte-ripple-action';
+</script>
+
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center flex flex-col items-center">
 		<h2 class="h2 flex items-center">
@@ -19,7 +23,7 @@
 		</figure>
 		<!-- / -->
 		<div class="flex justify-center space-x-2">
-			<a class="btn variant-filled" href="/preview">See Preview</a>
+			<a class="btn variant-filled" href="/preview" use:ripple>See Preview</a>
 		</div>
 	</div>
 </div>

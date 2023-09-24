@@ -1,5 +1,6 @@
 <script>
 	import { AppBar, LightSwitch, getDrawerStore } from '@skeletonlabs/skeleton';
+	import { ripple } from 'svelte-ripple-action';
 
 	const drawerStore = getDrawerStore();
 </script>
@@ -26,6 +27,7 @@
 			href="https://github.com/plasmatech8/skeleton-material-theme"
 			target="_blank"
 			rel="noreferrer"
+			use:ripple
 		>
 			GitHub
 		</a>

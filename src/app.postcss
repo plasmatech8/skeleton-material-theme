@@ -8,9 +8,29 @@ body {
 	@apply h-full overflow-hidden;
 }
 
-.btn {
-	@apply active:scale-100;
+/* Buttons */
+
+.btn:active,
+.btn-icon:active {
+	--tw-scale-x: 100% !important;
+	--tw-scale-y: 100% !important;
+	--tw-brightness: brightness(1) !important;
+	--tw-translate-x: 0;
+	--tw-translate-y: 0;
 }
+[class*='variant-outline-'],
+[class*='variant-ghost-'],
+[class*='variant-ringed-'] {
+	color: var(--tw-ring-color);
+}
+
+/* Ripple effect */
+
+.ripple {
+	--ripple-color: color-mix(in srgb, currentColor 28%, transparent);
+}
+
+/* Scrollbar */
 
 ::-webkit-scrollbar-track {
 	@apply !bg-surface-100-800-token border-x;
@@ -29,6 +49,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
 	@apply bg-surface-400-500-token;
 }
+
+/* Gradient heading */
 
 .gradient-heading {
 	@apply bg-clip-text text-transparent box-decoration-clone;

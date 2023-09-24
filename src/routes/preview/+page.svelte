@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { ProgressBar, SlideToggle } from '@skeletonlabs/skeleton';
+	import { ripple } from 'svelte-ripple-action';
 </script>
 
 <div class="container mx-auto p-6">
@@ -11,12 +12,12 @@
 		<h3 class="h3" data-toc-ignore>Preview</h3>
 		<!-- Buttons -->
 		<div class="grid grid-cols-3 gap-4">
-			<button class="btn variant-filled-primary">primary</button>
-			<button class="btn variant-filled-secondary">secondary</button>
-			<button class="btn variant-filled-tertiary">tertiary</button>
-			<button class="btn variant-filled-success">success</button>
-			<button class="btn variant-filled-warning">warning</button>
-			<button class="btn variant-filled-error">error</button>
+			<button class="btn variant-filled-primary" use:ripple>primary</button>
+			<button class="btn variant-filled-secondary" use:ripple>secondary</button>
+			<button class="btn variant-filled-tertiary" use:ripple>tertiary</button>
+			<button class="btn variant-filled-success" use:ripple>success</button>
+			<button class="btn variant-filled-warning" use:ripple>warning</button>
+			<button class="btn variant-filled-error" use:ripple>error</button>
 		</div>
 		<hr class="opacity-50" />
 		<!-- Progress Bars -->

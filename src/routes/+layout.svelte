@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { arrow, autoUpdate, computePosition, flip, offset, shift } from '@floating-ui/dom';
 	import { AppShell, Drawer, initializeStores, storePopup } from '@skeletonlabs/skeleton';
+	import 'svelte-ripple-action/ripple.css';
 	import '../app.postcss';
 	import HeaderContents from './HeaderContents.svelte';
 	import SidebarContents from './SidebarContents.svelte';
