@@ -3,7 +3,7 @@
 	import PreviewComponents from '$lib/PreviewComponents.svelte';
 </script>
 
-<div class="container mx-auto p-6 flex flex-col gap-8 my-40">
+<div class="container mx-auto p-6 flex flex-col gap-8 mb-40">
 	<section class="mb-10">
 		<h1 class="h1 mb-5">Preview</h1>
 		<p>Here is some preview UI that I stole from the docs:</p>
