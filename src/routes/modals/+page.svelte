@@ -32,7 +32,7 @@
 	}
 </script>
 
-<div class="container mx-auto p-10 flex flex-col gap-8">
+<div class="container mx-auto p-6 flex flex-col gap-8">
 	<h1 class="h1">Modal examples</h1>
 	<section class="card p-8 space-y-8 col-span-2 lg:col-span-1">
 		<h3 class="h3">Default Modals</h3>
