@@ -6,6 +6,7 @@
 		{ href: '/', text: 'Home' },
 		{ href: '/preview', text: 'Preview' },
 		{ href: '/buttons', text: 'Buttons' },
+		{ href: '/inputs', text: 'Inputs' },
 		{ href: '/modals', text: 'Modals' }
 	];
 
