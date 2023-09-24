@@ -28,7 +28,6 @@ The theme for this app is configured in two files:
 
 ## Caveat
 
-The ripple effect is not cannot be added to component which contains other components (like buttons)
-that are not exposed.
+The ripple effect cannot be added to child elements of pre-built components because these elements (i.e. buttons) are not exposed to the developer and "use:ripple" cannot be added.
 
-Components such as the pre-built modals, paginators and stepper, will not have the ripple effect added.
+Pre-built components such modals, paginators and steppers - will not have the ripple effect added.
