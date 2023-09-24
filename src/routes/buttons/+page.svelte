@@ -41,7 +41,7 @@
 			<button class="btn variant-soft-success" use:ripple>success</button>
 			<button class="btn variant-soft-warning" use:ripple>warning</button>
 			<button class="btn variant-soft-error" use:ripple>error</button>
-			<button class="btn variant-soft-surface" use:ripple>error</button>
+			<button class="btn variant-soft-surface" use:ripple>surface</button>
 			<button class="btn variant-soft" use:ripple>(N/A)</button>
 		</div>
 		<hr class="opacity-50" />
@@ -53,7 +53,7 @@
 			<button class="btn variant-ghost-success" use:ripple>success</button>
 			<button class="btn variant-ghost-warning" use:ripple>warning</button>
 			<button class="btn variant-ghost-error" use:ripple>error</button>
-			<button class="btn variant-ghost-surface" use:ripple>error</button>
+			<button class="btn variant-ghost-surface" use:ripple>surface</button>
 			<button class="btn variant-ghost" use:ripple>(N/A)</button>
 		</div>
 		<hr class="opacity-50" />
@@ -65,7 +65,7 @@
 			<button class="btn variant-glass-success" use:ripple>success</button>
 			<button class="btn variant-glass-warning" use:ripple>warning</button>
 			<button class="btn variant-glass-error" use:ripple>error</button>
-			<button class="btn variant-glass-surface" use:ripple>error</button>
+			<button class="btn variant-glass-surface" use:ripple>surface</button>
 			<button class="btn variant-glass" use:ripple>(N/A)</button>
 		</div>
 	</section>
