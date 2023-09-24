@@ -46,15 +46,11 @@
 	<!-- Radio Group -->
 	<div class="anim-float-radio absolute z-[1] top-[20%] left-[70%]">
 		<RadioGroup active="variant-filled-secondary">
-			<div use:ripple class="rounded-md text-white">
-				<RadioItem bind:group={value} name="justify" value={0}>Friendly</RadioItem>
-			</div>
-			<div use:ripple class="rounded-md text-white">
-				<RadioItem bind:group={value} name="justify" value={1}>Adaptive</RadioItem>
-			</div>
-			<div use:ripple class="rounded-md text-white">
-				<RadioItem bind:group={value} name="justify" value={2}>Customizable</RadioItem>
-			</div>
+			{#each ['Friendly', 'Adaptive', 'Customizable'] as text, i}
+				<div use:ripple class="rounded-md group" class:text-inherit={i === value}>
+					<RadioItem bind:group={value} name="justify" value={i}>{text}</RadioItem>
+				</div>
+			{/each}
 		</RadioGroup>
 	</div>
 	<!-- Card -->
