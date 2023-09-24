@@ -5,7 +5,8 @@
 	const links = [
 		{ href: '/', text: 'Home' },
 		{ href: '/preview', text: 'Preview' },
-		{ href: '/buttons', text: 'Buttons' }
+		{ href: '/buttons', text: 'Buttons' },
+		{ href: '/modals', text: 'Modals' }
 	];
 
 	const drawerStore = getDrawerStore();
