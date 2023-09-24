@@ -1,8 +1,8 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
-
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-10 text-center flex flex-col items-center">
-		<h2 class="h2">Skeleton Materialish theme.</h2>
+		<h2 class="h2 flex items-center">
+			Skeleton Material<span class="text-sm text-surface-500-400-token mr-2">(ish)</span> Theme.
+		</h2>
 		<!-- Animated Logo -->
 		<figure>
 			<section class="img-bg" />

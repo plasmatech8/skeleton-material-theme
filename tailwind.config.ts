@@ -1,21 +1,22 @@
-import { join } from 'path'
-import type { Config } from 'tailwindcss'
 import { skeleton } from '@skeletonlabs/tw-plugin';
-import { materialish } from './src/materialish'
+import { join } from 'path';
+import type { Config } from 'tailwindcss';
+import { material } from './src/material';
 
 export default {
 	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
+	content: [
+		'./src/**/*.{html,js,svelte,ts}',
+		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
+	],
 	theme: {
-		extend: {},
+		extend: {}
 	},
 	plugins: [
 		skeleton({
 			themes: {
-				custom: [
-					materialish,
-				],
-			},
-		}),
-	],
+				custom: [material]
+			}
+		})
+	]
 } satisfies Config;

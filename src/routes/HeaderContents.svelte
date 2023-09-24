@@ -23,7 +23,7 @@
 		<LightSwitch />
 		<a
 			class="btn btn-sm variant-outline-surface"
-			href="https://github.com/plasmatech8/skeleton-materialish-theme"
+			href="https://github.com/plasmatech8/skeleton-material-theme"
 			target="_blank"
 			rel="noreferrer"
 		>

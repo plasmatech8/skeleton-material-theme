@@ -1,7 +1,7 @@
 import type { CustomThemeConfig } from '@skeletonlabs/tw-plugin';
 
-export const materialish: CustomThemeConfig = {
-	name: 'materialish',
+export const material: CustomThemeConfig = {
+	name: 'material',
 	properties: {
 		// =~= Theme Properties =~=
 		'--theme-font-family-base': `system-ui`,
