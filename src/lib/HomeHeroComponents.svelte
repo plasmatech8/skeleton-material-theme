@@ -7,6 +7,7 @@
 		RadioItem,
 		SlideToggle
 	} from '@skeletonlabs/skeleton';
+	import { ripple } from 'svelte-ripple-action';
 
 	// Local
 	let value = 0;
@@ -21,7 +22,7 @@
 	</div>
 	<!-- Progress Radial -->
 	<div class="anim-float-progress anim-delay-200 absolute z-[1] top-[0%] left-[10%]">
-		<div class="card variant-glass p-4">
+		<div class="card variant-glass p-4 text-primary-500" use:ripple>
 			<ProgressRadial
 				width="w-20"
 				stroke={150}
@@ -45,9 +46,15 @@
 	<!-- Radio Group -->
 	<div class="anim-float-radio absolute z-[1] top-[20%] left-[70%]">
 		<RadioGroup active="variant-filled-secondary">
-			<RadioItem bind:group={value} name="justify" value={0}>Friendly</RadioItem>
-			<RadioItem bind:group={value} name="justify" value={1}>Adaptive</RadioItem>
-			<RadioItem bind:group={value} name="justify" value={2}>Customizable</RadioItem>
+			<div use:ripple class="rounded-md text-white">
+				<RadioItem bind:group={value} name="justify" value={0}>Friendly</RadioItem>
+			</div>
+			<div use:ripple class="rounded-md text-white">
+				<RadioItem bind:group={value} name="justify" value={1}>Adaptive</RadioItem>
+			</div>
+			<div use:ripple class="rounded-md text-white">
+				<RadioItem bind:group={value} name="justify" value={2}>Customizable</RadioItem>
+			</div>
 		</RadioGroup>
 	</div>
 	<!-- Card -->
@@ -81,7 +88,7 @@
 	</div>
 	<!-- Button -->
 	<div class="anim-float-button absolute z-[1] top-[78%] left-[15%]">
-		<button class="btn variant-glass-secondary">
+		<button class="btn variant-soft-secondary" use:ripple>
 			<span>Design</span>
 			<i class="fa-solid fa-spa" />
 		</button>
