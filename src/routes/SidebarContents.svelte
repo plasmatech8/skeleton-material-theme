@@ -25,5 +25,15 @@
 				{text}
 			</a>
 		{/each}
+		<hr />
+		<a
+			href="/info"
+			class="btn hover:variant-soft-secondary"
+			class:variant-soft-secondary={$page.route.id === '/info'}
+			on:click={() => drawerStore.close()}
+			use:ripple
+		>
+			Info
+		</a>
 	</div>
 </div>
