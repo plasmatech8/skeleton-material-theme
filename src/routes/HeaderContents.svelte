@@ -1,8 +1,22 @@
-<script>
-	import { AppBar, LightSwitch, getDrawerStore } from '@skeletonlabs/skeleton';
+<script lang="ts">
+	import {
+		AppBar,
+		LightSwitch,
+		getDrawerStore,
+		popup,
+		type PopupSettings
+	} from '@skeletonlabs/skeleton';
 	import { ripple } from 'svelte-ripple-action';
 
 	const drawerStore = getDrawerStore();
+
+	let menuPopupSettings: PopupSettings = {
+		event: 'click',
+		target: 'menuPopup',
+		middleware: {
+			offset: 20
+		}
+	};
 </script>
 
 <AppBar
@@ -13,7 +27,11 @@
 	slotTrail="place-content-end"
 >
 	<svelte:fragment slot="lead">
-		<button class="mr-4 text-xl lg:hidden btn-icon" on:click={() => drawerStore.open()} use:ripple>
+		<button
+			class="mr-4 text-xl lg:hidden btn-icon hover:variant-soft"
+			on:click={() => drawerStore.open()}
+			use:ripple
+		>
 			<i class="fa-solid fa-bars" />
 		</button>
 		<svg
@@ -36,7 +54,7 @@
 	<svelte:fragment slot="trail">
 		<LightSwitch />
 		<a
-			class="btn btn-sm variant-outline-surface"
+			class="btn btn-sm variant-outline-surface hidden sm:block"
 			href="https://github.com/plasmatech8/skeleton-material-theme"
 			target="_blank"
 			rel="noreferrer"
@@ -44,5 +62,62 @@
 		>
 			GitHub
 		</a>
+		<button class="btn-icon hover:variant-soft" use:ripple use:popup={menuPopupSettings}>
+			<i class="fa-solid fa-ellipsis-vertical text-lg" />
+		</button>
 	</svelte:fragment>
 </AppBar>
+
+<nav class="list-nav card p-1 w-60 shadow-xl" data-popup={menuPopupSettings.target}>
+	<ul>
+		<li class="">
+			<div class="focus:outline-none !px-6 !py-3 flex gap-5 items-center">
+				<i class="fas fa-user" />
+				<div>Hello User!</div>
+			</div>
+		</li>
+		<hr />
+		<li>
+			<a href="#profile" class="focus:outline-none" use:ripple>
+				<span class="badge bg-primary-500 aspect-square">
+					<i class="fa-solid fa-cube text-white" />
+				</span>
+				<span class="flex-auto">Profile</span>
+			</a>
+		</li>
+		<li>
+			<a href="#settings" class="focus:outline-none" use:ripple>
+				<span class="badge bg-primary-500 aspect-square">
+					<i class="fa-solid fa-gear text-white" />
+				</span>
+				<span class="flex-auto">Settings</span>
+			</a>
+		</li>
+		<li>
+			<a
+				href="https://github.com/plasmatech8/skeleton-material-theme"
+				target="_blank"
+				class="focus:outline-none"
+				use:ripple
+			>
+				<span class="badge bg-primary-500 aspect-square">
+					<i class="fa-brands fa-github text-white" />
+				</span>
+				<span class="flex-auto">GitHub Repository</span>
+			</a>
+		</li>
+		<hr />
+		<li>
+			<button
+				class="focus:outline-none w-full text-left"
+				on:click={() => alert('You just signed out of a website that you cannot sign in to...')}
+				use:ripple
+			>
+				<span class="badge bg-primary-500 aspect-square">
+					<i class="fa-solid fa-right-from-bracket text-white" />
+				</span>
+				<span class="flex-auto">Sign Out</span>
+			</button>
+		</li>
+	</ul>
+</nav>
