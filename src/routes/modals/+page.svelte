@@ -32,9 +32,10 @@
 	}
 </script>
 
-<div class="container mx-auto p-10">
-	<section class="flex flex-col gap-6">
-		<h1 class="h1">Modal examples</h1>
+<div class="container mx-auto p-10 flex flex-col gap-8">
+	<h1 class="h1">Modal examples</h1>
+	<section class="card p-8 space-y-8 col-span-2 lg:col-span-1">
+		<h3 class="h3">Default Modals</h3>
 		<div>
 			<button on:click={openAlertModal} class="btn variant-filled-primary" use:ripple>
 				Alert!
