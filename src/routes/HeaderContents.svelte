@@ -3,12 +3,14 @@
 		AppBar,
 		LightSwitch,
 		getDrawerStore,
+		getToastStore,
 		popup,
 		type PopupSettings
 	} from '@skeletonlabs/skeleton';
 	import { ripple } from 'svelte-ripple-action';
 
 	const drawerStore = getDrawerStore();
+	const toastStore = getToastStore();
 
 	let menuPopupSettings: PopupSettings = {
 		event: 'click',
@@ -17,6 +19,24 @@
 			offset: 20
 		}
 	};
+
+	let i = 0;
+	function triggerSignOutToast() {
+		const colors = [
+			'variant-filled-primary',
+			'variant-filled-secondary',
+			'variant-filled-tertiary',
+			'variant-filled-success',
+			'variant-filled-warning',
+			'variant-filled-error',
+			'variant-filled-surface'
+		];
+		toastStore.trigger({
+			message: 'You just signed out of a website that you cannot sign-in to...',
+			background: colors[i % colors.length]
+		});
+		i += 1;
+	}
 </script>
 
 <AppBar
@@ -108,11 +128,7 @@
 		</li>
 		<hr />
 		<li>
-			<button
-				class="focus:outline-none w-full text-left"
-				on:click={() => alert('You just signed out of a website that you cannot sign in to...')}
-				use:ripple
-			>
+			<button class="focus:outline-none w-full text-left" on:click={triggerSignOutToast} use:ripple>
 				<span class="badge bg-primary-500 aspect-square">
 					<i class="fa-solid fa-right-from-bracket text-white" />
 				</span>

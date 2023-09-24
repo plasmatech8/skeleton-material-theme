@@ -1,7 +1,14 @@
 <script lang="ts">
 	import { arrow, autoUpdate, computePosition, flip, offset, shift } from '@floating-ui/dom';
 	import '@fortawesome/fontawesome-free/js/all.min.js';
-	import { AppShell, Drawer, Modal, initializeStores, storePopup } from '@skeletonlabs/skeleton';
+	import {
+		AppShell,
+		Drawer,
+		Modal,
+		Toast,
+		initializeStores,
+		storePopup
+	} from '@skeletonlabs/skeleton';
 	import 'svelte-ripple-action/ripple.css';
 	import '../app.postcss';
 	import HeaderContents from './HeaderContents.svelte';
@@ -36,3 +43,5 @@
 </Drawer>
 
 <Modal />
+
+<Toast />
