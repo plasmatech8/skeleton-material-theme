@@ -52,5 +52,13 @@
 				Prompt!?
 			</button>
 		</div>
+
+		<div class="text-surface-500-400-token flex flex-col gap-2">
+			<p>
+				Note: The ripple effect cannot be added to the buttons in these pre-built modals because
+				there is no access to the button element.
+			</p>
+			<p>To add a ripple effect, <code>use:ripple</code> needs to be added to the DOM element.</p>
+		</div>
 	</section>
 </div>

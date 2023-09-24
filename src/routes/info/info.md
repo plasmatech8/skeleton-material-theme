@@ -24,3 +24,11 @@ The theme for this app is configured in two files:
 
 * [material.ts](https://github.com/plasmatech8/skeleton-material-theme/blob/main/src/material.ts) &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-left-long"></i> the main theme file
 * [app.postcss](https://github.com/plasmatech8/skeleton-material-theme/blob/main/src/app.postcss) &nbsp; <i class="fa-solid fa-left-long"></i> contains some extra styles & CSS corrections
+
+
+## Caveat
+
+The ripple effect is not cannot be added to component which contains other components (like buttons)
+that are not exposed.
+
+Components such as the pre-built modals, paginators and stepper, will not have the ripple effect added.

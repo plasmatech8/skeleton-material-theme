@@ -26,4 +26,14 @@ e.g.
 <button class="btn variant-filled-primary" use:ripple>primary</button>
 ```
 
-> Note: The default color of the ripple is set to the text color (in [app.postcss](https://github.com/plasmatech8/skeleton-material-theme/blob/main/src/app.postcss)).
+> [!NOTE]
+>
+> The default color of the ripple is set to the text color (in [app.postcss](https://github.com/plasmatech8/skeleton-material-theme/blob/main/src/app.postcss)).
+
+
+> [!WARNING]
+>
+> The ripple effect is not cannot be added to component which contains other components (like buttons)
+that are not exposed.
+>
+> Components such as the pre-built modals, paginators and stepper, will not have the ripple effect added.

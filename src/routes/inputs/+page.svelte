@@ -6,7 +6,7 @@
 	let locked = true;
 </script>
 
-<div class="container mx-auto p-6 flex flex-col gap-8 mb-16">
+<div class="container mx-auto p-6 flex flex-col gap-8 mb-40">
 	<h1 class="h1">Inputs</h1>
 	<section class="card p-8 space-y-8 col-span-2 lg:col-span-1">
 		<h3 class="h3">Basic Fields</h3>
@@ -125,61 +125,79 @@
 		<Stepper>
 			<Step>
 				<svelte:fragment slot="header">Get Started!</svelte:fragment>
-				<p>
-					This example Stepper will teach you how to use this component. Tap <u>next</u> to proceed to
-					the next step.
-				</p>
-				<!-- <svelte:fragment slot="navigation"><button class="btn variant-ghost-error">Abort</button></svelte:fragment> -->
+				<div class="min-h-[10rem]">
+					<p>
+						This example Stepper will teach you how to use this component. Tap <u>next</u> to proceed
+						to the next step.
+					</p>
+				</div>
 			</Step>
 			<Step>
 				<svelte:fragment slot="header">Going Back.</svelte:fragment>
-				<p>
-					The current step progress will be tracked at the top. Tap <u>back</u> to return to the previous
-					step.
-				</p>
+				<div class="min-h-[10rem]">
+					<p>
+						The current step progress will be tracked at the top. Tap <u>back</u> to return to the previous
+						step.
+					</p>
+				</div>
 			</Step>
 			<Step {locked}>
 				<svelte:fragment slot="header">A Locked Step.</svelte:fragment>
-				<p>
-					This Step component uses the <code class="code">locked</code> property to prevent progress.
-					This is ideal for multi-step forms, such as registration. For now we'll simulate a successful
-					validation condition using the toggle below.
-				</p>
-				<aside class="alert variant-ghost-warning">
-					<div class="alert-message">
-						<p>This step is <u>{locked ? 'Locked' : 'Unlocked'}</u></p>
-					</div>
-					<div class="alert-actions">
-						<SlideToggle name="locked-state" bind:checked={locked} active="bg-warning-500" />
-					</div>
-				</aside>
+				<div class="min-h-[10rem]">
+					<p>
+						This Step component uses the <code class="code">locked</code> property to prevent progress.
+						This is ideal for multi-step forms, such as registration. For now we'll simulate a successful
+						validation condition using the toggle below.
+					</p>
+					<aside class="alert variant-ghost-warning">
+						<div class="alert-message">
+							<p>This step is <u>{locked ? 'Locked' : 'Unlocked'}</u></p>
+						</div>
+						<div class="alert-actions">
+							<SlideToggle name="locked-state" bind:checked={locked} active="bg-warning-500" />
+						</div>
+					</aside>
+				</div>
 			</Step>
 			<Step>
 				<svelte:fragment slot="header">Long Form Content.</svelte:fragment>
-				<p>The steps will expand to fit content of any length.</p>
-				<p>
-					<!-- cspell:disable -->
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel expedita porro vero, saepe
-					dicta repellendus facilis ab accusamus unde, tempora ut nobis eum. Veniam, architecto corrupti.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel expedita porro vero, saepe
-					dicta repellendus facilis ab accusamus unde, tempora ut nobis eum. Veniam, architecto corrupti.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel expedita porro vero, saepe
-					dicta repellendus facilis ab accusamus unde, tempora ut nobis eum. Veniam, architecto corrupti.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel expedita porro vero, saepe
-					dicta repellendus facilis ab accusamus unde, tempora ut nobis eum. Veniam, architecto corrupti.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel expedita porro vero, saepe
-					dicta repellendus facilis ab accusamus unde, tempora ut nobis eum. Veniam, architecto corrupti.
-					<!-- cspell:enable -->
-				</p>
+				<div class="min-h-[10rem]">
+					<p>The steps will expand to fit content of any length.</p>
+					<p>
+						<!-- cspell:disable -->
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel expedita porro vero,
+						saepe dicta repellendus facilis ab accusamus unde, tempora ut nobis eum. Veniam, architecto
+						corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel expedita porro
+						vero, saepe dicta repellendus facilis ab accusamus unde, tempora ut nobis eum. Veniam, architecto
+						corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel expedita porro
+						vero, saepe dicta repellendus facilis ab accusamus unde, tempora ut nobis eum. Veniam, architecto
+						corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel expedita porro
+						vero, saepe dicta repellendus facilis ab accusamus unde, tempora ut nobis eum. Veniam, architecto
+						corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque vel expedita porro
+						vero, saepe dicta repellendus facilis ab accusamus unde, tempora ut nobis eum. Veniam, architecto
+						corrupti.
+						<!-- cspell:enable -->
+					</p>
+				</div>
 			</Step>
 			<Step>
 				<svelte:fragment slot="header">Almost Done.</svelte:fragment>
-				<p>
-					A Complete button will appear on the last step. When the step is unlocked and the button
-					pressed, an <code class="code">on:complete</code> event will be fired. You can use this trigger
-					to submit form data to a server.
-				</p>
+				<div class="min-h-[10rem]">
+					<p>
+						A Complete button will appear on the last step. When the step is unlocked and the button
+						pressed, an <code class="code">on:complete</code> event will be fired. You can use this trigger
+						to submit form data to a server.
+					</p>
+				</div>
 			</Step>
 		</Stepper>
+
+		<div class="text-surface-500-400-token flex flex-col gap-2">
+			<p>
+				Note: The ripple effect cannot be added to the buttons in this pre-built components because
+				there is no access to the button elements.
+			</p>
+			<p>To add a ripple effect, <code>use:ripple</code> needs to be added to the DOM element.</p>
+		</div>
 	</section>
 </div>
