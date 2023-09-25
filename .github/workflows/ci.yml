@@ -26,10 +26,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - run: cd ..
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install dependencies
-        working-directory: /home/runner/work/skeleton-material-theme
         run: npm install
       - name: Build SvelteKit app
         run: npm run build
