@@ -27,8 +27,6 @@ jobs:
 
     steps:
       - working-directory: /home/runner/work/skeleton-material-theme
-      - name: test
-        run: ls && cd .. && ls
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install dependencies
