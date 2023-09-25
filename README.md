@@ -1,6 +1,6 @@
 # Skeleton Material Theme
 
-This is a demo attempt to create a Material-like theme using [SvelteKit](https://kit.svelte.dev/)
+This is a demo which attempts to create a Material-like theme using [SvelteKit](https://kit.svelte.dev/)
 and [Skeleton](https://www.skeleton.dev/) UI.
 
 ![Alt text](./docs/home.png)
