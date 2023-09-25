@@ -25,8 +25,8 @@ jobs:
     # Specify runner + deployment step
     runs-on: ubuntu-latest
     steps:
-      - run: ls
-      - run: cd .. && ls
+      - name: test
+        run: ls && cd .. && ls
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install dependencies
