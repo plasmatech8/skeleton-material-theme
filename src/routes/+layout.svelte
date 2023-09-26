@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { arrow, autoUpdate, computePosition, flip, offset, shift } from '@floating-ui/dom';
 	import '@fortawesome/fontawesome-free/js/all.min.js';
 	import {
@@ -23,6 +24,7 @@
 
 <svelte:head>
 	<title>Skeleton Material Theme</title>
+	<base href={base} />
 </svelte:head>
 
 <!-- App Shell -->
