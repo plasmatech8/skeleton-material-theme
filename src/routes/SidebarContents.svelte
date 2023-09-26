@@ -20,7 +20,7 @@
 			<a
 				{href}
 				class="btn hover:variant-soft-primary"
-				class:variant-soft-primary={$page.route.id === href}
+				class:variant-soft-primary={base + $page.route.id === href}
 				on:click={() => drawerStore.close()}
 				use:ripple
 			>
