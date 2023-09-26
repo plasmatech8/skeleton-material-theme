@@ -1,38 +1,36 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
+name: Deploy to GitHub Pages
 on:
   push:
-    branches: 
-      - main
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+    branches: 'main'
 jobs:
+  build_site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm install
+      - name: build
+        env:
+          BASE_PATH: '/your-repo-name'
+        run: |
+          npm run build
+          touch build/.nojekyll
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # this should match the `pages` option in your adapter-static options
+          path: 'build/'
   deploy:
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    needs: build_site
+    runs-on: ubuntu-latest
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
-
-    # Deploy to the github-pages environment
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
-    # Specify runner + deployment step
-    runs-on: ubuntu-latest
-
     steps:
-      - run: cd ..
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Install dependencies
-        run: npm install
-      - name: Build SvelteKit app
-        run: npm run build
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v2 # or the latest "vX.X.X" version tag for this action
+        uses: actions/deploy-pages@v2
