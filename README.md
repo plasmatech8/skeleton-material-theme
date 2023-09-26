@@ -3,7 +3,9 @@
 A an example app which attempts to create a Material-like theme using [SvelteKit](https://kit.svelte.dev/)
 and [Skeleton](https://www.skeleton.dev/) UI.
 
-![Alt text](./docs/home.png)
+This site demo has been deployed to [GitHub pages](https://plasmatech8.github.io/skeleton-material-theme/).
+
+<img src="./docs/home.png" style="border-radius: 1rem">
 
 ## Theme
 
