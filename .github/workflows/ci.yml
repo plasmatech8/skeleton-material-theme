@@ -12,7 +12,7 @@ jobs:
         run: npm install
       - name: build
         env:
-          BASE_PATH: '/your-repo-name'
+          BASE_PATH: '/skeleton-material-theme'
         run: |
           npm run build
           touch build/.nojekyll
