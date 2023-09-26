@@ -38,5 +38,5 @@ e.g.
 > The ripple effect cannot be added to child elements of pre-built components because these elements (i.e. buttons) are not exposed to the developer and `use:ripple` cannot be added.
 >
 > Pre-built components such modals, paginators and steppers - will not have the ripple effect added.
-
-If you want the ripple effect to be configured globally, it is worth considering adding JavaScript to apply the ripple effect to all elements with the `btn` class.
+>
+> If you want the ripple effect to be configured globally, it is worth considering adding JavaScript to apply the ripple effect to all elements with the `btn` class.
