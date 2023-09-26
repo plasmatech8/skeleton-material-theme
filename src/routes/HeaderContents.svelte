@@ -100,7 +100,8 @@
 		</li>
 		<hr />
 		<li>
-			<a href="#profile" class="focus:outline-none" use:ripple>
+			<!-- svelte-ignore a11y-invalid-attribute -->
+			<a href="#" class="focus:outline-none" use:ripple>
 				<span class="badge bg-primary-500 aspect-square">
 					<i class="fa-solid fa-cube text-white" />
 				</span>
@@ -108,7 +109,8 @@
 			</a>
 		</li>
 		<li>
-			<a href="#settings" class="focus:outline-none" use:ripple>
+			<!-- svelte-ignore a11y-invalid-attribute -->
+			<a href="#" class="focus:outline-none" use:ripple>
 				<span class="badge bg-primary-500 aspect-square">
 					<i class="fa-solid fa-gear text-white" />
 				</span>
