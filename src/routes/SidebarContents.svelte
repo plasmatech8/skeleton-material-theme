@@ -1,13 +1,14 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import { getDrawerStore } from '@skeletonlabs/skeleton';
 	import { ripple } from 'svelte-ripple-action';
 	const links = [
-		{ href: '/', text: 'Home' },
-		{ href: '/preview', text: 'Preview' },
-		{ href: '/buttons', text: 'Buttons' },
-		{ href: '/inputs', text: 'Inputs' },
-		{ href: '/modals', text: 'Modals' }
+		{ href: `${base}/`, text: 'Home' },
+		{ href: `${base}/preview`, text: 'Preview' },
+		{ href: `${base}/buttons`, text: 'Buttons' },
+		{ href: `${base}/inputs`, text: 'Inputs' },
+		{ href: `${base}/modals`, text: 'Modals' }
 	];
 
 	const drawerStore = getDrawerStore();
@@ -28,7 +29,7 @@
 		{/each}
 		<hr />
 		<a
-			href="/info"
+			href="{base}/info"
 			class="btn hover:variant-soft-secondary"
 			class:variant-soft-secondary={$page.route.id === '/info'}
 			on:click={() => drawerStore.close()}

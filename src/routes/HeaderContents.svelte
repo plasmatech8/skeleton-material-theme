@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import {
 		AppBar,
 		LightSwitch,
@@ -54,7 +55,7 @@
 		>
 			<i class="fa-solid fa-bars" />
 		</button>
-		<a href="/" use:ripple class="btn-icon text-secondary-500">
+		<a href="{base}/" use:ripple class="btn-icon text-secondary-500">
 			<svg
 				class="fill-token -scale-x-[100%] h-9"
 				xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +69,7 @@
 		</a>
 	</svelte:fragment>
 
-	<a href="/" class="text-xl font-bold whitespace-nowrap">
+	<a href="{base}/" class="text-xl font-bold whitespace-nowrap">
 		<span class="gradient-heading">Skeleton</span> Material
 		<span class="hidden sm:inline">Theme</span>
 	</a>

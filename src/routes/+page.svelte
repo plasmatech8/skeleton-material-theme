@@ -1,4 +1,5 @@
 <script lant="ts">
+	import { base } from '$app/paths';
 	import { ripple } from 'svelte-ripple-action';
 </script>
 
@@ -23,11 +24,11 @@
 		</figure>
 		<!-- / -->
 		<div class="flex justify-center space-x-3">
-			<a class="btn variant-filled-primary px-4" href="/preview" use:ripple>
+			<a class="btn variant-filled-primary px-4" href="{base}/preview" use:ripple>
 				<i class="fa-solid fa-magnifying-glass mr-3" />
 				Preview
 			</a>
-			<a class="btn variant-filled-secondary px-4" href="/preview" use:ripple>
+			<a class="btn variant-filled-secondary px-4" href="{base}/preview" use:ripple>
 				<i class="fa-brands fa-github mr-3 text-xl" />
 				GitHub
 			</a>

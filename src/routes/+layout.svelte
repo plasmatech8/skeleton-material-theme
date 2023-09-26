@@ -24,7 +24,6 @@
 
 <svelte:head>
 	<title>Skeleton Material Theme</title>
-	<base href={base} />
 </svelte:head>
 
 <!-- App Shell -->
