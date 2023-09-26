@@ -25,7 +25,7 @@
 		<!-- / -->
 		<div class="flex justify-center space-x-3">
 			<a class="btn variant-filled-primary px-4" href="{base}/preview" use:ripple>
-				<i class="fa-solid fa-magnifying-glass mr-3" />
+				<i class="fas fa-eye mr-3" />
 				Preview
 			</a>
 			<a class="btn variant-filled-secondary px-4" href="{base}/preview" use:ripple>
