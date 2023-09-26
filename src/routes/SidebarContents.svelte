@@ -4,11 +4,12 @@
 	import { getDrawerStore } from '@skeletonlabs/skeleton';
 	import { ripple } from 'svelte-ripple-action';
 	const links = [
-		{ href: `${base}/`, text: 'Home' },
-		{ href: `${base}/preview`, text: 'Preview' },
-		{ href: `${base}/buttons`, text: 'Buttons' },
-		{ href: `${base}/inputs`, text: 'Inputs' },
-		{ href: `${base}/modals`, text: 'Modals' }
+		{ href: `${base}/`, text: 'Home', icon: 'fas fa-house' },
+		{ href: `${base}/preview`, text: 'Preview', icon: 'fas fa-eye' },
+		{ href: `${base}/buttons`, text: 'Buttons', icon: 'fas fa-arrow-pointer' },
+		{ href: `${base}/inputs`, text: 'Inputs', icon: 'fas fa-keyboard' },
+		{ href: `${base}/modals`, text: 'Modals', icon: 'fas fa-message' },
+		{ href: `${base}/toasts`, text: 'Toasts', icon: 'fas fa-bell' }
 	];
 
 	const drawerStore = getDrawerStore();
@@ -16,7 +17,7 @@
 
 <div class="bg-surface-50-900-token h-full border-surface-200-700-token border-r overflow-y-auto">
 	<div class="flex flex-col gap-2 p-2">
-		{#each links as { href, text }}
+		{#each links as { href, text, icon }}
 			<a
 				{href}
 				class="btn hover:variant-soft-primary"
@@ -24,6 +25,7 @@
 				on:click={() => drawerStore.close()}
 				use:ripple
 			>
+				<i class="{icon} mr-2" />
 				{text}
 			</a>
 		{/each}

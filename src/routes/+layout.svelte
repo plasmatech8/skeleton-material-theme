@@ -45,4 +45,4 @@
 
 <Modal />
 
-<Toast />
+<Toast max={8} />
