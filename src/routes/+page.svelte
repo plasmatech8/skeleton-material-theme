@@ -34,6 +34,10 @@
 			</a>
 		</div>
 	</div>
+	<div class="text-surface-300-600-token absolute bottom-6 text-sm p-2">
+		Note: As GitHub Pages is not the best deployment platform, you may need to wait for assets to
+		load. Consider reloading the page.
+	</div>
 </div>
 
 <style lang="postcss">
