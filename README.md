@@ -35,8 +35,37 @@ e.g.
 
 > [!WARNING]
 >
-> The ripple effect cannot be added to child elements of pre-built components because these elements (i.e. buttons) are not exposed to the developer and `use:ripple` cannot be added.
+> The ripple effect will not be added to child elements of pre-built components because these elements (i.e. buttons) are not exposed to the developer and `use:ripple` cannot be added.
 >
-> Pre-built components such modals, paginators and steppers - will not have the ripple effect added.
->
-> If you want the ripple effect to be configured globally, it is worth considering adding JavaScript to apply the ripple effect to all elements with the `btn` class.
+> Pre-built components such modals, paginators and steppers - will not have the ripple effect added unless you configure JavaScript, as described below.
+
+#### Automatic global ripple effect
+
+If you want the ripple effect to be configured globally without needing to use `use:ripple`, it is worth considering adding JavaScript to apply the ripple effect to all elements with certain classes.
+
+This would allow buttons inside of pre-built components (modals, toasts, stepper-form, etc) to have ripple effects.
+
+For example, below is an Svelte action which you can put in your `+layout.svelte` to automatically add ripple effects to all elements with class `btn` or `btn-icon`:
+
+```ts
+/**
+ * Every 100ms, add ripple effect to all .btn, .btn-icon class elements
+ * if they do not already have a ripple effect configured.
+ */
+function rippleBtnClass(e: Element) {
+    setInterval(() => {
+        const btns = e.querySelectorAll('.btn, .btn-icon');
+        btns.forEach((el) => {
+            if (!el.classList.contains('ripple-effect')) {
+                ripple(el as HTMLElement);
+            }
+        });
+    }, 100);
+}
+```
+
+Usage:
+
+```svelte
+<svelte:body use:rippleBtnClass />
+```
