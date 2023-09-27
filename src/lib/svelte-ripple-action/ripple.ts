@@ -50,8 +50,6 @@ function ripple(el: HTMLElement, options?: RippleOptions) {
 	setOptions(options);
 
 	const createRipple = (e: PointerEvent) => {
-		console.log('Created');
-
 		addClassIfMissing();
 
 		const rect = el.getBoundingClientRect();
