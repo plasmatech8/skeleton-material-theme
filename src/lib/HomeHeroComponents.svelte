@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { ripple } from '$lib/svelte-ripple-action';
 	import {
 		Avatar,
 		LightSwitch,
@@ -7,7 +8,6 @@
 		RadioItem,
 		SlideToggle
 	} from '@skeletonlabs/skeleton';
-	import { ripple } from 'svelte-ripple-action';
 
 	// Local
 	let value = 0;

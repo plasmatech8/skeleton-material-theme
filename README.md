@@ -18,8 +18,8 @@ The theme is configured in two files:
 
 ### Ripple
 
-For the ripple-effect, the [svelte-ripple-action](https://github.com/Posandu/svelte-ripple-action)
-NPM package was installed.
+For the ripple-effect, ~~the [svelte-ripple-action](https://github.com/Posandu/svelte-ripple-action)
+NPM package was installed~~. Currently using a modified version of this library located in [src/lib/svelte-ripple-action](src/lib/svelte-ripple-action).
 
 To add the Ripple effect to a button or anchor tag, you can use the `use:ripple` Svelte action.
 

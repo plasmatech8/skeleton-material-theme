@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { ripple } from '$lib/svelte-ripple-action';
 	import { getToastStore } from '@skeletonlabs/skeleton';
-	import { ripple } from 'svelte-ripple-action';
 
 	const toastStore = getToastStore();
 

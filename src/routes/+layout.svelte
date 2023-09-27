@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import '$lib/svelte-ripple-action/ripple.css';
 	import { arrow, autoUpdate, computePosition, flip, offset, shift } from '@floating-ui/dom';
 	import '@fortawesome/fontawesome-free/js/all.min.js';
 	import {
@@ -10,7 +10,6 @@
 		initializeStores,
 		storePopup
 	} from '@skeletonlabs/skeleton';
-	import 'svelte-ripple-action/ripple.css';
 	import '../app.postcss';
 	import HeaderContents from './HeaderContents.svelte';
 	import SidebarContents from './SidebarContents.svelte';

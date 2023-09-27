@@ -1,6 +1,6 @@
 <script lant="ts">
 	import { base } from '$app/paths';
-	import { ripple } from 'svelte-ripple-action';
+	import { ripple } from '$lib/svelte-ripple-action';
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">

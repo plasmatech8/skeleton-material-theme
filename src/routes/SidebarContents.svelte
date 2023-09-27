@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
+	import { ripple } from '$lib/svelte-ripple-action';
 	import { getDrawerStore } from '@skeletonlabs/skeleton';
-	import { ripple } from 'svelte-ripple-action';
 	const links = [
 		{ href: `${base}/`, text: 'Home', icon: 'fas fa-house' },
 		{ href: `${base}/preview`, text: 'Preview', icon: 'fas fa-eye' },
