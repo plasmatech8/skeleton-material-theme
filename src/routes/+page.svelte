@@ -1,6 +1,14 @@
 <script lant="ts">
 	import { base } from '$app/paths';
 	import { ripple } from '$lib/svelte-ripple-action';
+	import { onMount } from 'svelte';
+
+	let assetsLoaded = false;
+
+	onMount(async () => {
+		await fetch('/');
+		assetsLoaded = true;
+	});
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
@@ -34,9 +42,14 @@
 			</a>
 		</div>
 	</div>
-	<div class="text-surface-300-600-token absolute bottom-6 text-sm p-2">
-		Note: As GitHub Pages is not the best deployment platform, you may need to wait for assets to
-		load. Consider reloading the page.
+	<div class=" absolute bottom-6 p-2">
+		{#if !assetsLoaded}
+			<div class="text-error-500 font-bold">⚠️ Assets have probably not loaded yet!</div>
+		{/if}
+		<div class="text-surface-300-600-token text-sm">
+			Note: As GitHub Pages is not the best deployment platform, you may need to wait for assets to
+			load. Consider reloading the page.
+		</div>
 	</div>
 </div>
 
