@@ -16,12 +16,16 @@ The theme is configured in two files:
 * [material.ts](https://github.com/plasmatech8/skeleton-material-theme/blob/main/src/material.ts) &nbsp;&nbsp;&nbsp;&nbsp; <- The main theme file for Skeleton
 * [app.postcss](https://github.com/plasmatech8/skeleton-material-theme/blob/main/src/app.postcss) &nbsp; <i class="fa-solid fa-left-long"></i> <- Contains some extra styles & CSS corrections
 
-### Ripple
+### Ripple Effect
 
-For the ripple-effect, ~~the [svelte-ripple-action](https://github.com/Posandu/svelte-ripple-action)
-NPM package was installed~~. Currently using a modified version of this library located in [src/lib/svelte-ripple-action](src/lib/svelte-ripple-action).
+The [svelte-ripple-action](https://github.com/Posandu/svelte-ripple-action)
+NPM package was installed to implement the material ripple.
 
-To add the Ripple effect to a button or anchor tag, you can use the `use:ripple` Svelte action.
+```bash
+npm install svelte-ripple-action
+```
+
+To add a Ripple effect to a DOM element, you can use the `use:ripple` Svelte action.
 
 e.g.
 ```svelte
@@ -30,22 +34,24 @@ e.g.
 
 > [!NOTE]
 >
-> The default color of the ripple is set to the text color (in [app.postcss](https://github.com/plasmatech8/skeleton-material-theme/blob/main/src/app.postcss)).
+> The default color of the ripple is set to the text color.
+>
+> You can set the ripple color either using CSS, Tailwind class, or using the Svelte action arguments.
 
 
 > [!WARNING]
 >
-> The ripple effect will not be added to child elements of pre-built components because these elements (i.e. buttons) are not exposed to the developer and `use:ripple` cannot be added.
+> The ripple effect action cannot be added to child elements of pre-built components because the elements (i.e. buttons) are not exposed to the developer and `use:ripple` cannot be added.
 >
-> Pre-built components such modals, paginators and steppers - will not have the ripple effect added unless you configure JavaScript, as described below.
+> If you wish to add ripple effects to child elements of pre-built components (modals, paginators, steppers, etc) - you need to configure JavaScript, as described below.
 
-#### Automatic global ripple effect
+#### How to implement Automatic global ripple effect
 
-If you want the ripple effect to be configured globally without needing to use `use:ripple`, it is worth considering adding JavaScript to apply the ripple effect to all elements with certain classes.
+If you want the ripple effect to be configured globally (or for chidren of a DOM element), without needing to use `use:ripple`, you can consider adding JavaScript to apply the ripple effect to all elements with specific classes.
 
-This would allow buttons inside of pre-built components (modals, toasts, stepper-form, etc) to have ripple effects.
+This can allow buttons inside of pre-built components (modals, toasts, stepper-form, etc) to have ripple effects.
 
-For example, below is an Svelte action which you can put in your `+layout.svelte` to automatically add ripple effects to all elements with class `btn` or `btn-icon`:
+For example, below is a Svelte action which you can place in `+layout.svelte` to automatically add ripple effects to all elements with the `btn` or `btn-icon` class:
 
 ```ts
 /**

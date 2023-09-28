@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { ripple } from '$lib/svelte-ripple-action';
 	import { getModalStore } from '@skeletonlabs/skeleton';
+	import { ripple } from 'svelte-ripple-action';
 	const modalStore = getModalStore();
 
 	function openAlertModal() {

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ripple } from '$lib/svelte-ripple-action';
+	import { ripple } from 'svelte-ripple-action';
 </script>
 
 <div class="container mx-auto p-6 flex flex-col gap-8 mb-20">

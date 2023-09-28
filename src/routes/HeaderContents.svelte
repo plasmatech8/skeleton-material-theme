@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { ripple } from '$lib/svelte-ripple-action';
 	import {
 		AppBar,
 		LightSwitch,
@@ -9,6 +8,7 @@
 		popup,
 		type PopupSettings
 	} from '@skeletonlabs/skeleton';
+	import { ripple } from 'svelte-ripple-action';
 
 	const drawerStore = getDrawerStore();
 	const toastStore = getToastStore();

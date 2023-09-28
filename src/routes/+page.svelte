@@ -1,8 +1,8 @@
 <script lant="ts">
 	import { base } from '$app/paths';
-	import { ripple } from '$lib/svelte-ripple-action';
 	import { ProgressRadial } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
+	import { ripple } from 'svelte-ripple-action';
 
 	let assetsLoaded = false;
 

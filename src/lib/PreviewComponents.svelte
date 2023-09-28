@@ -1,6 +1,6 @@
 <script>
-	import { ripple } from '$lib/svelte-ripple-action';
 	import { ProgressBar, SlideToggle } from '@skeletonlabs/skeleton';
+	import { ripple } from 'svelte-ripple-action';
 </script>
 
 <!-- Buttons -->
