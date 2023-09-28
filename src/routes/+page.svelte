@@ -1,6 +1,7 @@
 <script lant="ts">
 	import { base } from '$app/paths';
 	import { ripple } from '$lib/svelte-ripple-action';
+	import { ProgressRadial } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
 
 	let assetsLoaded = false;
@@ -44,7 +45,15 @@
 	</div>
 	<div class=" absolute bottom-6 p-2">
 		{#if !assetsLoaded}
-			<div class="text-error-500 font-bold">⚠️ Assets have probably not loaded yet!</div>
+			<div class="text-error-500 font-bold flex gap-2">
+				<span> ⚠️ Assets have probably not loaded yet! </span>
+				<ProgressRadial
+					width="w-5"
+					stroke={100}
+					meter="stroke-error-500"
+					track="stroke-error-500/30"
+				/>
+			</div>
 		{/if}
 		<div class="text-surface-300-600-token text-sm">
 			Note: As GitHub Pages is not the best deployment platform, you may need to wait for assets to
